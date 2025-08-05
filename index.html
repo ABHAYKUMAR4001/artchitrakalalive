@@ -1,60 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art Chitrakala Live</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    main {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-      background: #fff;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Chitrakala Live – Celebrating Creativity</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Art Chitrakala Live is India’s premier art platform registered under the Government of India. Supported by Bollywood stars and sports personalities, we have distributed over ₹10 lakh in prizes since 2020 through our art contests, exhibitions and art sales. Join us to showcase your talent and celebrate creativity.">
+    <meta name="keywords" content="Art Chitrakala, art contests, art exhibition, art sale, Indian art platform, sell art, buy art, art competition, art results">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Navigation */
+        header {
+            background-color: #1d1e33;
+            color: #fff;
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+        nav li {
+            position: relative;
+         }
+        nav a {
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #fcbf49;
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(to right, #8e2de2, #4a00e0);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #fcbf49;
+            color: #1d1e33;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #f2a341;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #1d1e33;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        section h3::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #fcbf49;
+            margin-top: 10px;
+        }
+
+        /* About section */
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-text {
+            flex: 1 1 350px;
+        }
+        .about-image {
+            flex: 1 1 300px;
+            min-height: 250px;
+            background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+        
+        /* Art Contest section */
+        .contest-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .contest-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .contest-card h4 {
+            margin-bottom: 10px;
+            color: #4a00e0;
+            font-size: 1.5rem;
+        }
+        .contest-card p {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .contest-card .btn {
+            display: inline-block;
+            background-color: #4a00e0;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        .contest-card .btn:hover {
+            background-color: #3106a8;
+        }
+
+        /* Gallery section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .gallery-grid img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Contact section */
+        .contact {
+            background-color: #1d1e33;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .contact p {
+            margin-bottom: 15px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .social-icons a {
+            color: #fcbf49;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #fff;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0d0d26;
+            color: #aaa;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+            .about {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Art Chitrakala Live</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Gallery</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <h2>About This Site</h2>
-    <p>This is a simple website showcasing my art and creative projects. I plan to share paintings, tutorials, and upcoming exhibitions here.</p>
-    <p>Stay tuned for updates!</p>
-  </main>
-  <footer>
-    &copy; 2025 Art Chitrakala Live
-  </footer>
+    <header>
+        <h1>Art Chitrakala Live</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="ac1.html">Dec-Jan '21 Results</a></li>
+                <li><a href="exhibition.html">July '20 Results</a></li>
+                <li><a href="ac.html">Sept-Oct '20 Results</a></li>
+                <li><a href="acac.html">Nov '20 Results</a></li>
+                <li><a href="artsaleregistration.html">Art Sale</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Best Indian Art Platform</h2>
+        <p>Art Chitrakala Live is India’s premier art platform registered under the Government of India. Supported by Bollywood stars and sports personalities, we’ve distributed over ₹10 lakh in prizes since 2020 through our contests, exhibitions and sales.</p>
+        <a href="#contest" class="cta-button">Explore Contest Winners</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h3>About Us</h3>
+        <div class="about">
+            <div class="about-text">
+                <p>Founded with a passion for art, Art Chitrakala Live provides a platform where budding and professional artists can showcase their talent. We host regular art contests across various age groups, distribute significant cash prizes and feature stunning pieces from artists around the world.</p>
+                <p>Our mission is to nurture creativity, celebrate diversity in art, and connect artists with art lovers. With a dedicated art sale exhibition and no hidden commissions, we help artists reach a wider audience and sell their work. Whether you’re a professional artist or just starting out, there’s a place for you here.</p>
+            </div>
+            <div class="about-image"></div>
+        </div>
+    </section>
+
+    <!-- Art Contest Section -->
+    <section id="contest">
+        <h3>Recent Contest Results</h3>
+        <div class="contest-cards">
+            <div class="contest-card">
+                <h4>Dec’20 – Jan’21 Contest</h4>
+                <p>View the winners and emerging artists across all categories for the December–January contest.</p>
+                <a href="ac1.html" class="btn">View Results</a>
+            </div>
+            <div class="contest-card">
+                <h4>July 2020 Contest</h4>
+                <p>See the results declared on 5 Aug 2020, including prizes distributed for all age groups.</p>
+                <a href="exhibition.html" class="btn">View Results</a>
+            </div>
+            <div class="contest-card">
+                <h4>Sept–Oct 2020 Contest</h4>
+                <p>Find out the winners announced on 31 Oct 2020 for adult, senior, middle and junior groups.</p>
+                <a href="ac.html" class="btn">View Results</a>
+            </div>
+            <div class="contest-card">
+                <h4>Nov 2020 Contest</h4>
+                <p>Discover the winners from our November contest, declared on 9 Dec 2020 at 11 PM.</p>
+                <a href="acac.html" class="btn">View Results</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h3>Gallery</h3>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?auto=format&fit=crop&w=600&q=80" alt="Artwork 1">
+            <img src="https://images.unsplash.com/photo-1498575207490-21a1e9f6ae4c?auto=format&fit=crop&w=600&q=80" alt="Artwork 2">
+            <img src="https://images.unsplash.com/photo-1535909339361-9f5d7069657b?auto=format&fit=crop&w=600&q=80" alt="Artwork 3">
+            <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374eb2?auto=format&fit=crop&w=600&q=80" alt="Artwork 4">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=80" alt="Artwork 5">
+            <img src="https://images.unsplash.com/photo-1498511224515-bc5c6a6ce2a7?auto=format&fit=crop&w=600&q=80" alt="Artwork 6">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h3 style="color:#fcbf49;">Get in Touch</h3>
+        <p>Have questions, suggestions or want to collaborate? Drop us a line!</p>
+        <p>Email: <a href="mailto:contact@artchitrakalalive.com" style="color:#fcbf49;">contact@artchitrakalalive.com</a></p>
+        <p>Phone: <a href="tel:+910000000000" style="color:#fcbf49;">+91 00000 00000</a></p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Art Chitrakala Live • Celebrating Creativity
+    </footer>
 </body>
 </html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Sale Registration | Art Chitrakala Live</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+        }
+        header {
+            background-color: #1d1e33;
+            color: #fff;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #fff;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #fcbf49;
+        }
+        .hero {
+            background: linear-gradient(to right, #ee0979, #ff6a00);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            color: #1d1e33;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .benefits-list {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .benefits-list ul {
+            list-style: none;
+        }
+        .benefits-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1rem;
+        }
+        .benefits-list li::before {
+            content: '\\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 2px;
+            color: #ee0979;
+        }
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .step {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .step h4 {
+            font-size: 1.4rem;
+            color: #ee0979;
+            margin-bottom: 10px;
+        }
+        .step p {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .step .btn {
+            display: inline-block;
+            background-color: #ee0979;
+            color: #fff;
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+        .step .btn:hover {
+            background-color: #c70d67;
+        }
+        .note {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        .note p {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .note a {
+            color: #ee0979;
+            font-weight: 600;
+        }
+        footer {
+            background-color: #0d0d26;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.4rem;
+            }
+            .steps {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Art Chitrakala Live</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ac1.html">Dec-Jan '21 Results</a></li>
+                <li><a href="exhibition.html">July '20 Results</a></li>
+                <li><a href="ac.html">Sept-Oct '20 Results</a></li>
+                <li><a href="acac.html">Nov '20 Results</a></li>
+                <li><a href="artsaleregistration.html">Art Sale</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Art Sale Exhibition</h2>
+        <p>Reserve your seat and showcase your art to the world. Join our art sale exhibition and reach a wider audience.</p>
+    </section>
+
+    <section class="section">
+        <h3>Benefits &amp; Rules to Participate</h3>
+        <div class="benefits-list">
+            <ul>
+                <li>The registration fee is ₹999.</li>
+                <li>This is <strong>not</strong> an art contest; it’s a platform to promote your artwork to a larger audience.</li>
+                <li>You need to participate with <strong>3 artworks</strong>.</li>
+                <li>We provide social media coverage for your art and never delete your listed paintings.</li>
+                <li>Get lifetime access to our private Telegram art buy/sell group.</li>
+                <li>We promote your art account and tag you for better publicity.</li>
+                <li><strong>No commission</strong> is taken from the paintings you sell.</li>
+                <li>Nude arts are not allowed.</li>
+                <li>WhatsApp support: <a href="tel:+917795415560">+91 7795415560</a></li>
+            </ul>
+        </div>
+
+        <h3>How to Register</h3>
+        <div class="steps">
+            <div class="step">
+                <h4>Step 1: Pay the Fee</h4>
+                <p>Pay the registration fee and save the screenshot of your payment. This confirms your slot in the exhibition.</p>
+                <a href="#" class="btn">Reserve your seat for ₹999</a>
+            </div>
+            <div class="step">
+                <h4>Step 2: Share Your Details</h4>
+                <p>Send us the payment screenshot and your three best paintings (with size and price) via WhatsApp at <a href="https://wa.me/917795415560" style="color:#ee0979;">+91 7795415560</a>. We will then schedule the date and time when your art goes live on our Instagram &amp; Facebook.</p>
+                <a href="https://wa.me/917795415560" class="btn">WhatsApp Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Important Note</h3>
+        <div class="note">
+            <p>We run paid ads to drive traffic to our page, and buyers will contact you directly if they like your art. However, we cannot guarantee that your art will be sold; it depends on audience interest.</p>
+            <p>All copyright rights remain with the respective art owners. For copyright issues or disputes, please email us. Any disputes will be addressed under Bangalore jurisdiction only.</p>
+            <p>Read our complete <a href="#">Terms &amp; Conditions</a>.</p>
+            <p>Keep the artist in you alive! — <em>Art Chitrakala Team</em></p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Art Chitrakala Live • Art Sale Exhibition
+    </footer>
+</body>
+</html>
